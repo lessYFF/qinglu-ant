@@ -1,0 +1,125 @@
+.app-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.component-section {
+  margin-top: 20px;
+}
+
+.component-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+}
+
+/* 新增样式 */
+.header {
+  padding: 0 20px;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1890ff;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+.site-layout-content {
+  margin: 24px 16px;
+  padding: 24px;
+  background: #fff;
+  min-height: 280px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.ant-menu-item {
+  margin: 0 !important;
+}
+
+.ant-card {
+  margin-bottom: 20px;
+}
+
+.ant-tabs-tab {
+  font-size: 14px;
+}
+
+/* 弹窗示例样式 */
+.modal-demo-btn {
+  margin-right: 10px;
+}
+
+/* 组件展示区域 */
+.component-demo {
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* 用于分隔示例的分隔线 */
+.demo-divider {
+  margin: 24px 0;
+}
+
+/* 组件头部信息区 */
+.component-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* 搜索框容器 */
+.search-container {
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+/* 搜索框样式 */
+.component-search {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s;
+  background-color: #fff;
+}
+
+.component-search:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  outline: none;
+}
+
+.component-search:hover {
+  border-color: #40a9ff;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .component-header {
+    flex-direction: column;
+  }
+  
+  .component-header > div:first-child {
+    margin-bottom: 16px;
+  }
+} 

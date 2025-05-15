@@ -1,0 +1,34 @@
+.myUpload {
+  display: inline-flex;
+
+  .uploadBox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #d9d9d9;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+
+  .uploadBox:hover {
+    border-color: #1890ff;
+  }
+
+  .uploadIcon {
+    font-size: 40px;
+    color: #999999;
+  }
+
+  .uploadImage {
+    flex: none;
+  }
+
+  :global {
+    .ant-upload.ant-upload-select-picture-card {
+      margin: 0;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

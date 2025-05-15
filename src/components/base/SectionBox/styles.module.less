@@ -1,0 +1,68 @@
+.pageSection {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  .main {
+    flex: 1;
+    margin: 15px;
+    overflow: auto;
+  }
+}
+
+.pageFooter {
+  height: 60px;
+  background-color: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.moduleSection {
+  background-color: #ffffff;
+  padding: 15px 0;
+  .moduleHeader {
+    padding: 0 15px 0 0;
+    display: flex;
+    align-items: center;
+    .leftBorder {
+      background-color: #0086f6;
+      width: 5px;
+      margin-right: 10px;
+      border-radius: 0 4px 4px 0;
+      height: 28px;
+    }
+    .titleBox {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .titleContent {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+      }
+    }
+  }
+  .moduleTip {
+    display: flex;
+    align-items: center;
+    padding: 2px 15px 0;
+    .tipIcon {
+      font-size: 14px;
+      color: #0086f6;
+    }
+    .tip {
+      color: #d9001b;
+      margin-left: 6px;
+    }
+  }
+  .moduleContent {
+    padding: 10px 15px 0;
+  }
+}
