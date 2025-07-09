@@ -36,7 +36,7 @@ export const MySearchForm = (props: unknown) => {
       >
         <div className={styles.formBox}>
           <Form layout="inline" form={form}>
-            {open && collapsed ? children : children[0] || children}
+            {open && collapsed ? children : children?.[0] || children}
           </Form>
           {showCollapsed && (
             <div className={styles.collapsed}>

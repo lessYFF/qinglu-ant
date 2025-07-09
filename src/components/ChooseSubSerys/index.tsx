@@ -56,6 +56,7 @@ function EnabledChooseSubSery(
   const [keyword, setKeyword] = useState('')
   const { subSerys, loading, refresh } = useSubSerys(seryId)
   const options = useMemo(() => {
+    if (!Array.isArray(subSerys) || subSerys.length === 0) return [{ label: '暂无数据', value: 0, instance: null as unknown as SubSery }]
     const allOptions = subSerys.map(subSery => ({ label: `${subSery.id}-${subSery.name}`, value: subSery.id, instance: subSery }))
     const filtered = keyword ? allOptions.filter(opt => keywordCompare(keyword, opt.label)) : allOptions
     return [

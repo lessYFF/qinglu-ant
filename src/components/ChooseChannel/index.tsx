@@ -9,7 +9,8 @@ export function ChooseChannel(props: {
 }) {
   const { value, onChange } = props as Required<typeof props>
 
-  const { data: channels } = useChannels()
+  const { data: channels = [] } = useChannels()
+  if (!Array.isArray(channels) || channels.length === 0) return <Select disabled placeholder="请选择" />
   const options = channels
     .filter(channel => channel.id !== 21 && channel.id !== 22 && channel.id !== 23)
     .map(channel => ({ label: channel.channelName, value: channel.id }))

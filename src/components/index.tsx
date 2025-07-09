@@ -29,3 +29,9 @@ export * from './aliyun-verify'
 export * from './pay'
 export * from './base'
 
+// 组件工厂系统 - AI调用支持
+export * from './ComponentRegistry'
+export * from './ComponentFactory'
+export * from './AICallAPI'
+export { default as ComponentShowcase } from './ComponentShowcase'
+

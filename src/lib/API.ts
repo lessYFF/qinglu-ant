@@ -62,7 +62,7 @@ interface APIParams<T = unknown> extends RequestInit {
   // 除了通过 setToken() 记录 token，特殊场景下也可以在调用时直接传入 token
   token?: string
 
-  // 业务上是否允许接口报出“未授权”，为 true 时，出现未授权不会触发 unauthorizedCallback
+  // 业务上是否允许接口报出"未授权"，为 true 时，出现未授权不会触发 unauthorizedCallback
   allowUnauthorized?: boolean
 }
 
@@ -86,7 +86,8 @@ async function API<RespData, ReqData = unknown>(
 
   let url = config.APIPrefix + path
 
-  const query = { ...rawQuery, buildTime: process.env.buildTime || '' }
+  // 使用配置中的buildTime，避免直接访问process.env
+  const query = { ...rawQuery, buildTime: config.buildTime || '' }
   if (method === 'GET' && truthy(reqData)) Object.assign(query, reqData as Record<string, string>)
   if (method === 'DELETE' && truthy(reqData)) Object.assign(query, reqData as Record<string, string>)
   if (Object.keys(query).length) url = combineUrl(url, query)

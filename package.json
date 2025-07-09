@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@codeup.aliyun.com:qinglu/qinglu-ant.git"
+    "url": "https://github.com/lessYFF/qinglu-ant.git"
   },
   "keywords": [
     "react",
@@ -30,12 +30,14 @@
     "@ant-design/pro-provider": "^1.10.0",
     "@ant-design/pro-table": "^2.80.0",
     "@ant-design/pro-utils": "^1.45.3",
+    "@types/react-router-dom": "^5.3.3",
     "antd": "^4.24.8",
     "classnames": "^2.3.2",
     "moment": "^2.29.4",
     "qrcode.react": "^4.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0",
+    "react-router-dom": "^7.6.3",
     "s": "^1.0.0"
   },
   "devDependencies": {

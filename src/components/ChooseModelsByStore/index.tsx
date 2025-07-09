@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback, useMemo, useEffect } from 'react'
 import { Select } from 'antd'
 import throttle from 'lodash/throttle'
 import { type ExtSelectProps, formatExtSelectProps } from '@/lib/lang'
@@ -52,7 +52,8 @@ export function ChooseModelsByStore(props: ExtSelectProps<number, StoreVehicleMo
 
   const [keyword, setKeyword] = useState('')
   const { models, loading } = useModels(storeId, keyword)
-  const options = models.map(model => ({ label: model.vehicleModelName, value: model.vehicleModelId, instance: model }))
+  if (!Array.isArray(models) || models.length === 0) return <Select disabled placeholder={placeholder} />
+  const options = (models).map(model => ({ label: model.vehicleModelName, value: model.vehicleModelId, instance: model }))
 
   return <Select
     className="app-choose-models-by-store"

@@ -53,6 +53,7 @@ function EnabledChooseSery(props: Omit<FormattedExtSelectProps<number, Sery, Bas
   const [keyword, setKeyword] = useState('')
   const { serys, loading, refresh } = useSerys({ brandIds })
   const options = useMemo(() => {
+    if (!Array.isArray(serys) || serys.length === 0) return [{ label: '暂无数据', value: 0, instance: null as unknown as Sery }]
     const allOptions = serys.map(sery => ({ label: `${sery.id}-${sery.seryName}`, value: sery.id, instance: sery }))
     const filtered = keyword ? allOptions.filter(opt => keywordCompare(keyword, opt.label)) : allOptions
     return [
