@@ -62,7 +62,7 @@ export interface Channel {
 
 export async function getChannels() {
   const res = await API<Channel[]>('/channel/v1/list')
-  return res.success
+  return res.success && Array.isArray(res.data)
     ? res.data.filter(v => v.id !== 0) // 0 是线下渠道，目前不将其应用到展示和编辑里
     : []
 }
